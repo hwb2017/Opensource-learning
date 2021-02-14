@@ -26,3 +26,9 @@
 动态路由在vue的路由守卫 beforeEach 中实现，通过同步flag来保证只同步一次该用户所能访问的url路径
 
 动态菜单在动态路由的基础上实现，将路由的meta信息转化为适用于菜单列表展示的数据结构
+
+# PR
+### 增加Excel导入导出功能
+[PR地址](https://github.com/flipped-aurora/gin-vue-admin/commit/c8ce87df94ff9d63175156af1caa588792f9ba20)
+
+实现方法: 主要依赖360的excel库实现对excel文件的处理，excel文件导出时，针对成功情况(返回二进制文件)和失败情况(返回json消息体)有做区分处理
