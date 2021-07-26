@@ -5,7 +5,7 @@ import {
     styleModule,
     eventListenersModule,
     h,
-  } from "./node_modules/snabbdom/build/index.js";
+  } from "snabbdom";
   
   const patch = init([
     // Init patch function with chosen modules
@@ -17,7 +17,7 @@ import {
   
   const container = document.getElementById("container");
   
-  const vnode = h("div#container.two.classes", { on: { click: someFn } }, [
+  const vnode = h("div#container.two.classes", { on: { click: () => console.log("Hello world") } }, [
     h("span", { style: { fontWeight: "bold" } }, "This is bold"),
     " and this is just normal text",
     h("a", { props: { href: "/foo" } }, "I'll take you places!"),
@@ -27,7 +27,7 @@ import {
   
   const newVnode = h(
     "div#container.two.classes",
-    { on: { click: anotherEventHandler } },
+    { on: { click: () => "Hello" } },
     [
       h(
         "span",
