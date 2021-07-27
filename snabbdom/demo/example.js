@@ -27,7 +27,7 @@ import {
   
   const newVnode = h(
     "div#container.two.classes",
-    { on: { click: () => "Hello" } },
+    { on: { click: () => console.log("Hello") } },
     [
       h(
         "span",
