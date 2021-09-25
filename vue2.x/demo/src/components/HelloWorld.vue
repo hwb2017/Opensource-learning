@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>{{ username }}</h2>
-    <button @click="handleClick">切换</button>
+    <!-- <button @click="handleClick">切换</button> -->
   </div>
 </template>
 

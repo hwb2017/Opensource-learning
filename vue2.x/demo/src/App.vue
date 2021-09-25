@@ -1,7 +1,9 @@
 <template>
   <div id="parent">
-    {{ message }}
-    <HelloWorld />
+    <!-- {{ message }}
+    {{ fullName }} -->
+    <HelloWorld :msg="message"/>
+    <button @click="handleClick">切换</button>
   </div>
 </template>
 
@@ -14,9 +16,21 @@ export default {
   // },
   data() {
     return {
-      message: 'Hello World'
+      message: 'Hello World',
+      firstName: 'John',
+      lastName: 'Lee'
     }
   },
+  computed: {
+    fullName() {
+      return this.firstName + ' ' + this.lastName;
+    }
+  },
+  methods: {
+    handleClick() {
+      this.message = this.message === 'Hello World' ? 'Hi World' : 'Hello World'
+    }
+  },  
   beforeMount() {
     console.log('beforeMount Child')
   },
